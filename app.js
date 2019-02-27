@@ -6,12 +6,37 @@ const path = require('path');
 const PunkAPIWrapper = require('punkapi-javascript-wrapper');
 const punkAPI = new PunkAPIWrapper();
 
+// const indexRouter = require('./routes/index');
+// const usersRouter = require('./routes/users');
+
+// app.use('/', indexRouter);
+// app.use('/users', usersRouter);
+
 app.set('view engine', 'hbs');
-app.set('views', __dirname + '/views');
+app.set('views', path.join(__dirname, '/views'));
+app.set('view options', { layout: 'layout' });
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/', (req, res, next) => {
   res.render('index');
+});
+
+app.get('/beers', (req, res, next) => {
+  // res.sendFile('/beers.html');
+
+  const data = {};
+  punkAPI.getBeers()
+    .then(beers => {
+      data.beer = beers;
+      res.render('beer', data);
+    })
+    .catch(error => {
+      console.log(error);
+    });
+});
+
+app.get('/random-beers', (req, res, next) => {
+  res.sendFile('/random-beers.html');
 });
 
 app.use((req, res, next) => {
