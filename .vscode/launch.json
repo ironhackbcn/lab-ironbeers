@@ -9,7 +9,7 @@
       "request": "launch",
       "name": "nodemon",
       "runtimeExecutable": "/Users/tomasyaya/.nvm/versions/node/v11.10.0/bin/nodemon",
-      "program": "${workspaceFolder}/bin/www",
+      "program": "${workspaceFolder}/app.js",
       "restart": true,
       "console": "integratedTerminal",
       "internalConsoleOptions": "neverOpen"
