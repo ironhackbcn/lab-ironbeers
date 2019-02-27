@@ -11,7 +11,7 @@ var randomBeersRouter = require('./routes/randombeers');
 
 app.set('view engine', 'hbs');
 app.set('views', path.join(__dirname, '/views'));
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, '/public')));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use('/', indexRouter);
@@ -34,13 +34,14 @@ app.get('/beers', (req, res, next) => {
 });
 
 app.get('/randombeers', (req, res, next) => {
-  punkAPI.getRandom()
-    .then(beers => {
-      res.render('randombeers', { beers: beers });
-    })
-    .catch(error => {
-      console.log(error);
-    });
+  // punkAPI.getRandom()
+  //   .then(response => {
+  //     res.render('randombeers', { response: response });
+  //   })
+  //   .catch(error => {
+  //     console.log(error);
+  //   });
+  res.render('randombeers');
 });
 
 app.use((req, res, next) => {
