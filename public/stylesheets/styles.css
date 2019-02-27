@@ -98,3 +98,22 @@ footer p{
   justify-content: center;
   margin-top: 20px;
 }
+
+main{
+  display: flex;
+  justify-content: center;
+}
+
+.random-section{
+  display: flex;
+  width: 50%;
+  margin-top: 100px;
+  margin-bottom: 150px;
+}
+
+.random-section img{
+  height: 250px;
+  width: auto;
+  margin-right: 20px;
+}
+  
