@@ -69,10 +69,16 @@ footer a {
 /*  PARTIAL */
 .beers {
     display: flex;
-    align-content: flex-start;
+    flex-flow: row wrap;
+    justify-content: space-around;
 }
 
 .beer {
-    border: 1px solid black;
-    width: 300px;
+    margin: 10px;
+    width: 30%;
+    text-align: center;
+}
+
+.beer h4 {
+    color: grey;
 }
