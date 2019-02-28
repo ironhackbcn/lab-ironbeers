@@ -2,45 +2,26 @@ const express = require('express');
 const hbs = require('hbs');
 const app = express();
 const path = require('path');
-const PunkAPIWrapper = require('punkapi-javascript-wrapper');
-const punkAPI = new PunkAPIWrapper();
-var indexRouter = require('./routes/index');
-var beersRouter = require('./routes/beers');
-var randomBeersRouter = require('./routes/randombeers');
+
+const indexRouter = require('./routes/index');
+// const beersRouter = require('./routes/beers');
+// const randomBeersRouter = require('./routes/randombeers');
 
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
+hbs.registerPartials(path.join(__dirname, '/views/partials'));
 
 app.use(express.static(path.join(__dirname, '/public')));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+
 app.use('/', indexRouter);
-app.use('/beers', beersRouter);
-app.use('/randombeers', randomBeersRouter);
-
-hbs.registerPartials(path.join(__dirname, '/views/partials'));
-
-app.get('/', (req, res, next) => {
-  res.render('index');
-});
-
-app.get('/beers', (req, res, next) => {
-  // Revisar porque ni puta ideaa
-  punkAPI.getBeers()
-    .then(response => {
-      console.log(response);
-      res.render('beers', { response: response });
-    })
-    .catch(error => console.log(error));
-});
-
-app.get('/randombeers', (req, res, next) => {
-  res.render('randombeers');
-});
+// app.use('/beers', beersRouter);
+// app.use('/randombeers', randomBeersRouter);
 
 app.use((req, res, next) => {
   res.status(404);
-  res.render('not-found');
+  res.render('notFound');
 });
 
 app.use((err, req, res, next) => {

@@ -1,18 +1,22 @@
-const express = require('express');
-const router = express.Router();
-const PunkAPIWrapper = require('punkapi-javascript-wrapper');
-const punkAPI = new PunkAPIWrapper();
+// este archivo no vale una mierda porque tenemos el index.js
+// const express = require('express');
+// const PunkAPIWrapper = require('punkapi-javascript-wrapper');
 
-router.get('/beers', (req, res, next) => {
-  let theBeers;
+// const router = express.Router();
 
-  punkAPI.getBeers()
-    .then(response => {
-      theBeers = response;
-      console.log(response);
-      res.render('beers', theBeers);
-    })
-    .catch(error => console.log(error));
-});
+// const punkAPI = new PunkAPIWrapper();
 
-module.exports = router;
+// router.get('/', (req, res, next) => {
+//   res.render('index');
+// });
+
+// router.get('/beers', async (req, res, next) => {
+//   try {
+//     const beers = await punkAPI.getBeers();
+//     res.render('beers', { beers });
+//   } catch (error) {
+//     next(error);
+//   }
+// });
+
+// module.exports = router;
