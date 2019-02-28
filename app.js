@@ -5,9 +5,9 @@ const app = express();
 const path = require('path');
 const PunkAPIWrapper = require('punkapi-javascript-wrapper');
 const punkAPI = new PunkAPIWrapper();
-var indexRouter = require('./routes/index');
-var beersRouter = require('./routes/beers');
-var randomBeersRouter = require('./routes/randombeers');
+const indexRouter = require('./routes/index');
+const beersRouter = require('./routes/beers');
+const randomBeersRouter = require('./routes/randombeers');
 
 app.set('view engine', 'hbs');
 app.set('views', path.join(__dirname, '/views'));
@@ -31,17 +31,18 @@ app.get('/beers', (req, res, next) => {
       res.render('beers', { response: response });
     })
     .catch(error => console.log(error));
+  // res.render('beers');
 });
 
 app.get('/randombeers', (req, res, next) => {
-  // punkAPI.getRandom()
-  //   .then(response => {
-  //     res.render('randombeers', { response: response });
-  //   })
-  //   .catch(error => {
-  //     console.log(error);
-  //   });
-  res.render('randombeers');
+  punkAPI.getRandom()
+    .then(random => {
+      res.render('randombeers', { random: random });
+    })
+    .catch(error => {
+      console.log(error);
+    });
+  // res.render('randombeers');
 });
 
 app.use((req, res, next) => {

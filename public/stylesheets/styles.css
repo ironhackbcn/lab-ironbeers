@@ -46,4 +46,20 @@ body {
   width: 100%;
   height: 20vh;
 }
+
+
+/* --------- PARTIALS ----------- */
+
+.beer-partial {
+  width: 250px;
+  height: 300px;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.beer-partial img {
+  width: 100px;
+  height: 100px;
+}
   
