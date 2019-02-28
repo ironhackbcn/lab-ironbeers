@@ -2,7 +2,7 @@
 <ul>
   {{#each beers}}
   <li>
-    {{>beer}}
+    <a href="/beers/{{this.id}}">{{this.name}}</a>
   </li>
   {{/each}}
 </ul>
