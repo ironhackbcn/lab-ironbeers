@@ -1,9 +1,7 @@
-<div class="index-container">
-  Beer
+<div class="beers-container">
+  {{#each beers}}
+      {{> beerPartials}}
+  {{/each}}
 </div>
 
-<ul>
-{{#each beers}}
-<li>{{this.name}}</li>
-{{/each}}
-</ul>
+  
