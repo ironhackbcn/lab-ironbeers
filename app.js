@@ -4,6 +4,7 @@ const hbs = require('hbs');
 const app = express();
 const path = require('path');
 const beersRouter = require('./routes/beers');
+const indexRouter = require('./routes/index');
 
 app.set('view engine', 'hbs');
 app.set('views', path.join(__dirname, '/views'));
@@ -11,7 +12,8 @@ app.set('view options', { layout: 'layout' });
 hbs.registerPartials(path.join(__dirname, '/views/partials'));
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', beersRouter);
+app.use('/', indexRouter);
+app.use('/beers', beersRouter);
 
 app.use((req, res, next) => {
   res.status(404);

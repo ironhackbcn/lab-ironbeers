@@ -1,4 +1,10 @@
 <h1>Listado de cervezas</h1>
+
+<form action="/beers" method="GET">
+  <input type="text" name="name">
+  <button type="submit">Buscar Cerveza</button>
+</form>
+
 <ul>
   {{#each beers}}
   <li>
