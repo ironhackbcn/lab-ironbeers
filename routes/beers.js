@@ -9,11 +9,19 @@ const express = require('express');
 const router = express.Router();
 const PunkAPIWrapper = require('punkapi-javascript-wrapper');
 const punkAPI = new PunkAPIWrapper();
-const beersRouter = require('./routes/beers');
 
 /* GET users listing. */
 router.get('/', function (req, res, next) {
-  res.send('respond with a resource');
+  res.render('index');
+});
+
+router.get('/beers', async (req, res, next) => {
+  try {
+    const beers = await punkAPI.getBeers();
+    res.render('beers', { beers });
+  } catch (error) {
+    next(error);
+  }
 });
 
 module.exports = router;

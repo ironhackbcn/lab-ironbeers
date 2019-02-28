@@ -3,10 +3,12 @@ const express = require('express');
 const hbs = require('hbs');
 const app = express();
 const path = require('path');
+const beersRouter = require('./routes/beers');
 
 app.set('view engine', 'hbs');
 app.set('views', path.join(__dirname, '/views'));
 app.set('view options', { layout: 'layout' });
+hbs.registerPartials(path.join(__dirname, '/views/partials'));
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', beersRouter);

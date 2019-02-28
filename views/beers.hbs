@@ -1,5 +1,8 @@
+<h1>Listado de cervezas</h1>
 <ul>
-  {{#each response}}
-  <li>{{this.beer}}</li>
+  {{#each beers}}
+  <li>
+    {{>beer}}
+  </li>
   {{/each}}
 </ul>
