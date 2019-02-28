@@ -31,7 +31,18 @@ app.get('/beers', (req, res, next) => {
 });
 
 app.get('/random-beers', (req, res, next) => {
-    res.render('random-beer');
+    const data = {};
+    punkAPI.getRandom()
+        .then(beers => {
+            data.beers = beers;
+            console.log(data);
+            res.render('random-beer', data);
+        })
+        .catch(error => {
+            console.log(error);
+        });
+
+    // res.render('random-beer');
 });
 
 // -- 404 and error handler
