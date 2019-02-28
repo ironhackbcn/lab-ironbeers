@@ -1,6 +1,6 @@
 
 const express = require('express');
-// const hbs = require('hbs');
+const hbs = require('hbs');
 const app = express();
 const path = require('path');
 
@@ -8,9 +8,11 @@ const beersRouter = require('./routes/beers');
 
 app.set('view engine', 'hbs');
 app.set('views', path.join(__dirname, '/views'));
+hbs.registerPartials(path.join(__dirname, '/views/partials'));
+
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/users', beersRouter);
+app.use('/', beersRouter);
 
 // -- 404 and error handler
 
