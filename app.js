@@ -28,20 +28,20 @@ app.get('/beers', (req, res, next) => {
   punkAPI.getBeers()
     .then(beers => {
       data.beer = beers;
-      res.render('beer', data);
+      res.render('beers', data);
     })
     .catch(error => {
       console.log(error);
     });
 });
 
-app.get('/random-beers', (req, res, next) => {
-  res.sendFile('/random-beers.html');
-});
+// app.get('/random-beers', (req, res, next) => {
+//   res.sendFile('/random-beers');
+// });
 
 app.use((req, res, next) => {
   res.status(404);
-  res.render('not-found');
+  res.render('error');
 });
 
 // NOTE: requires a views/error.ejs template
