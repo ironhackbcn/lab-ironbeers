@@ -11,6 +11,7 @@ app.set('views', path.join(__dirname, '/views'));
 app.set('view options', { layout: 'layout' });
 hbs.registerPartials(path.join(__dirname, '/views/partials'));
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.urlencoded({ extended: false }));
 
 app.use('/', indexRouter);
 app.use('/beers', beersRouter);
