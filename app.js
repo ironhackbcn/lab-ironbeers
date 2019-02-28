@@ -41,7 +41,7 @@ app.get('/beers', (req, res, next) => {
 
 app.use((req, res, next) => {
   res.status(404);
-  res.render('error');
+  res.render('not-foundnode');
 });
 
 // NOTE: requires a views/error.ejs template
