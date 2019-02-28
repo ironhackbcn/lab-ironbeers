@@ -19,4 +19,13 @@ router.get('/beers', async (req, res, next) => {
   }
 });
 
+router.get('/random-beer', async (req, res, next) => {
+  try {
+    const randomBeerArray = await punkAPI.getRandom();
+    res.render('random-beer', { beer: randomBeerArray[0] });
+  } catch (error) {
+    next(error);
+  }
+});
+
 module.exports = router;
