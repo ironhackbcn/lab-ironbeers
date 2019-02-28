@@ -3,42 +3,33 @@ const express = require('express');
 // const hbs = require('hbs');
 const app = express();
 const path = require('path');
-// const PunkAPIWrapper = require('punkapi-javascript-wrapper');
-// const punkAPI = new PunkAPIWrapper();
-const indexRouter = require('./routes/index');
-const usersRouter = require('./routes/beers');
+
+const beersRouter = require('./routes/beers');
 
 app.set('view engine', 'hbs');
 app.set('views', path.join(__dirname, '/views'));
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', indexRouter);
-app.use('/users', usersRouter);
+app.use('/users', beersRouter);
 
-app.get('/', (req, res, next) => {
-  res.render('index');
+// -- 404 and error handler
 
-  app.get('/beers', (req, res, next) => {
-    res.render('beers');
-  });
+// NOTE: requires a views/not-found.ejs template
+app.use((req, res, next) => {
+  res.status(404);
+  res.render('not-found');
+});
 
-  app.get('/randombeers', (req, res, next) => {
-    res.render('randombeers');
-  });
+// NOTE: requires a views/error.ejs template
+app.use((err, req, res, next) => {
+  // always log the error
+  console.error('ERROR', req.method, req.path, err);
 
-  app.use((req, res, next) => {
-    res.status(404);
-    res.render('not-found');
-  });
-
-  app.use((err, req, res, next) => {
-    console.error('ERROR', req.method, req.path, err);
-
-    if (!res.headersSent) {
-      res.status(500);
-      res.render('error');
-    }
-  });
+  // only render if the error ocurred before sending the response
+  if (!res.headersSent) {
+    res.status(500);
+    res.render('error');
+  }
 });
 
 app.listen(3000);
