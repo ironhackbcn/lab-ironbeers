@@ -24,12 +24,18 @@ app.get('/beers', (req, res, next) => {
       res.render('beers', { beers });
     })
     .catch(error => {
-      console.log(error);
+      next(error);
     });
 });
 
 app.get('/random-beers', (req, res, next) => {
-  res.render('random-beers');
+  punkAPI.getRandom()
+    .then(randomBeer => {
+      res.render('random-beers', { randomBeer });
+    })
+    .catch(error => {
+      console.log(error);
+    });
 });
 
 // NOTE: requires a views/not-found.ejs template
