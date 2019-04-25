@@ -20,11 +20,10 @@ app.get('/', (req, res, next) => {
 app.get('/beers', (req, res, next) => {
   punkAPI.getBeers()
   .then((beers) => {
-    console.log({beers});
     res.status(200);
     res.render('beers', {beers});
   })
-  .catch(error => {
+  .catch((error) => {
     console.log(error)
   })
 });
@@ -35,7 +34,7 @@ app.get('/random-beer', (req, res, next) => {
     res.status(200);
     res.render('random-beer', {beers});
   })
-  .catch(error => {
+  .catch((error) => {
     console.log(error)
   })
 });
