@@ -1,8 +1,66 @@
-/*
-white: #F7F9F9;
-light-blue: #2081C3;
-dark-blue: #0A2C42;
-grey: rgba(145, 145, 145, 0.481);
-font-family: Arial, Helvetica, sans-serif
-*/
+body{
+  font-family: Arial, Helvetica, sans-serif;
+}
+ header {
+   background: #2081C3;
+ } 
+
+ nav {
   
+ }
+ ul{
+  display: flex;
+  justify-content: flex-start;
+  list-style: none;
+ }
+ ul li a{
+  text-decoration: none;
+  color: #F7F9F9;
+ }
+
+ main{
+  background: rgba(145, 145, 145, 0.481);
+  width: 100%;
+ }
+
+ footer {
+   background: #0A2C42;
+   color: #F7F9F9;
+ }
+
+.button { 
+  text-decoration: none;
+  color: #F7F9F9;
+  padding: 10px;
+  background: #2081C3;
+  margin:10px;
+  border-radius: 6px;
+
+ }
+ img{
+   width:300px;
+   text-align: center;
+   margin:10px;
+   
+ }
+ .index-container{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+ }
+
+ .beer-img{
+   max-height: 200px;
+   width: auto;
+ }
+ .beer-container{
+   display:grid;
+   grid-template-columns: 1fr 1fr 1fr;
+   grid-template-rows: auto auto auto;
+   grid-gap: 5px;
+   max-width: 80%;
+ }
+ .grid-item{
+   padding: 15px;
+ }
