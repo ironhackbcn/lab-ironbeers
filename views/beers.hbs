@@ -1,11 +1,10 @@
-<section>
-  <ul>
+<section class="beers-collection">  
 {{#each beers}}
-<img src="{{image_url}}" alt="beer image">
-<h2>{{name}}</h2>
-<h4>{{tagline}}</h4>
-<p>{{description}}</p>
-
+  <article class="beer-collection">
+    <img src="{{image_url}}" alt="beer image">
+    <h2>{{name}}</h2>
+    <h4>{{tagline}}</h4>
+    <p>{{description}}</p>
+  </article>
 {{/each}}
-  </ul>
 </section>
