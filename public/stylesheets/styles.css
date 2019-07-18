@@ -5,4 +5,155 @@ dark-blue: #0A2C42;
 grey: rgba(145, 145, 145, 0.481);
 font-family: Arial, Helvetica, sans-serif
 */
+
+/* ---- reset ---- */
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+
+/* ---- typography ---- */
+
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #F7F9F9;
+  text-decoration: none;
+}
+
+body {
+  color: #111;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 147%;
+}
+
+h1 {}
+
+h2 {
+  color: black;
+}
+
+h3 {
+  color: rgba(145, 145, 145, 0.481);
+}
+
+p {
+  margin: 0;
+  color: black;
+}
+
+
+
+/* ---- layout ---- */
+
+#site-header {
+  padding: 30px 0;
+  color: white;
+  background: #111;
+}
+
+#site-footer {
+  color: white;
+  padding: 60px 0;
+  background: #111;
+}
+
+#site-main {
+  margin-bottom: 60px;
+}
+
+.container {
+  margin: 0 20px;
+}
+
+.section {
+  margin-bottom: 20px;
+  padding-top: 20px;
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 728px;
+    margin: 0 auto;
+  }
+}
+
+
+
+
+/* ---- components ---- */
+
+.button {
+  width: 100%;
+  background-color: blue;
+  color: #fff;
+  border: 1px solid #fff
+}
+
+.button-alt {
+  color: blue;
+  background-color: #fff;
+}
+
+/* ---- section ---- */
+
+section.testimonials {
+  // ...
+}
+
+section.testimonials .button {
+  margin-bottom: 10px;
+}
+
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  background-color: #2081C3;
+  height: 40px;
+  width: 100%;
+}
+a {
+  margin: 10px auto;
+}
+
+main {
+  background-color: rgba(145, 145, 145, 0.481);
+}
+
+footer {
+  background-color: #0A2C42;
+  height: 40px;
+  width: 100%;
+}
+
+.index-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.home-beer-img {
+  width: 20%;
+  height: 20%;
+  margin: 5% auto;
+}
+
+.home-button {
+  background-color: #2081C3;
+}
   
+
+/* Beers */
+.img-beers {
+  height: 30px;
+  width: 20px;
+}
