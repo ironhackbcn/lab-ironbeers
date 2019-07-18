@@ -1,30 +1,166 @@
-
-
-:root{
---white: #F7F9F9;
---light-blue: #2081C3;
---dark-blue: #0A2C42;
+:root {
+--white: #f7f9f9;
+--light-blue: #2081c3;
+--dark-blue: #0a2c42;
 --grey: rgba(145, 145, 145, 0.481);
-font-family: Arial, Helvetica, sans-serif;
+--black: #000;
 }
 
+.header,
+.footer,
+.beers-section {
+  width: 100%;
+  padding: 1.25rem 2.5rem;
+  display: inline-flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+}
 
-.header{
-background-color: var(--light-blue);
-height:10vh;
+.header {
+  background-color: var(--light-blue);
+  height: 10vh;
+}
 
+.navbar {
+  width: 100%;
+}
+
+.navbar-list {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  font-size: .875rem;
+  line-height: .875;
+}
+
+@media (min-width: 768px) {
+  .navbar-list {
+    justify-content: space-evenly;
+  }
 }
 
 .navbar-list-link {
-color: var(--white);
+  color: var(--white);
+}
+
+.navbar-list-link:hover {
+  font-weight: 700;
+  text-decoration: underline;
 }
 
 .main {
-    height:80vh;
-
+  padding: 5.5rem 2.5rem 4.5rem;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-start;
+  align-content: center;
 }
-.footer{
-    background-color: var(--dark-blue);
-    height:10vh;
-    color: var(--white);
+
+/* FOOTER */ 
+
+.footer {
+  background-color: var(--dark-blue);
+  height: 10vh;
+  color: var(--white);
+}
+
+.footer-credits {
+  font-size: .875rem;
+  line-height: .875;
+}
+
+/* VIEWS */
+
+/* HOME */
+.home-container {
+  height: 65vh;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-content: center;
+}
+
+.home-img {
+  width: 10rem;
+  height: auto;
+  align-self: center;
+  margin: 0 0 2rem 1rem;
+}
+
+@media (min-width: 768px) {
+  .home-img {
+    width: 13rem;
+    margin: 0 0 2rem 2.5rem;
+  }
+}
+
+.home-btn {
+  display: inline-flex;
+  align-self: center;
+  text-align: center;
+  font-weight: 700;
+  padding: .875rem 1.25rem;
+  margin: 0 0 .875rem 0;
+  background-color: var(--light-blue);
+  color: var(--white);
+}
+
+.home-btn:hover {
+  background-color: var(--dark-blue);
+}
+
+@media (min-width: 768px) {
+  .home-btn {
+    padding: .875rem 1.25rem;
+    margin: 1rem 0;
+  }
+}
+
+.beer-container {
+  width: 100%;
+  padding: 1.25rem 2.5rem;
+  display: inline-flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .beer-container {
+    width: 50%;
+    padding: 1.25rem 2.5rem;
+    display: inline-flex;
+    flex-flow: row nowrap;
+    align-items: center;
+  }
+}
+
+@media (min-width: 1400px) {
+  .beer-container {
+    width: 30%;
+    padding: 1.25rem 2.5rem;
+    display: inline-flex;
+    flex-flow: row nowrap;
+    align-items: center;
+  }
+}
+
+.beer-image {
+  width: auto;
+  height: 20rem;
+  margin-right: 2rem;
+}
+
+.beer-title,
+.beer-description {
+  color: var(--black);
+}
+
+.beer-tagline {
+  color: var(--grey);
+}
+
+.beers-section.random {
+  height: 80vh;
+  justify-content: center;
 }
