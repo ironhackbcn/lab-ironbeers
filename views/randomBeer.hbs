@@ -10,9 +10,9 @@
       <p>{{description}}</p>
       <ul>
         <p><span>Food Pairing</span></p>
-        <li>
-          <p>{{food_pairing}}</p>
-        </li>
+          {{#each food_pairing}}
+          <li>{{this}}</li>
+          {{/each}}
       </ul>
       <p><span>Brewers Tips: </span>{{brewers_tips}}</p>
     </div>
