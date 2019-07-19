@@ -17,8 +17,17 @@ app.get('/', (req, res, next) => {
 app.get('/beers', (req, res, next) => {
   const beers = punkAPI.getBeers()
     .then(beersArr => {
-      console.log(beersArr);
       res.render('beers', { beersArr });
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+});
+app.get('/random-beer', (req, res, next) => {
+  const beers = punkAPI.getRandom()
+    .then(beersArr => {
+      console.log(beersArr);
+      res.render('random-beer', beersArr[0]);
     })
     .catch((err) => {
       console.log(err);

@@ -10,12 +10,9 @@ font-family: Arial, Helvetica, sans-serif
      padding: 0;
      
  } 
-html, body{
-    height: 100%;
-}
+
 body {
     font-family: Arial, Helvetica, sans-serif;
-    overflow: hidden;
 }
 img{
     width: 100%;
@@ -47,10 +44,9 @@ nav ul li a {
 }
 main {
     background: #F7F9F9;
-    height: 100vh;
 }
 .index-container {
-    max-width: 50%;
+    max-width: 40%;
     width: 100%;
     margin: auto;
     display: flex;
@@ -62,8 +58,6 @@ footer {
     height: 60px;
     background: #0A2C42;
     display: flex;
-    position: absolute;
-    bottom: 0;
     width: 100%;
     align-items: stretch;
 }
@@ -76,4 +70,49 @@ footer p span {
     color: #F7F9F9;
     padding-left: 25px;
     align-items: center;
+}
+.beers-section{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 90%;
+    margin: auto;
+}
+.card-beer{
+    width: 33%;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+.card-beer header{
+    display: flex;
+    flex-direction: column;
+}
+.card-beer header h4{
+    margin-bottom: 5px;
+}
+.card-beer header p{
+    color: rgba(145, 145, 145, 0.481);
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+.card-beer header div{
+    text-align: center;
+}
+.card-beer img{
+    max-height: 120px;
+    width:auto;
+}
+.card-beer .desc-beers{
+    font-size: 12px;
+    text-align: justify;
+    margin-bottom: 20px;
+}
+.random-beer{
+    display: flex;
+}
+.random-beer div img{
+    max-width: 200px;
+    max-height: 300px;
+    width: auto;
 }
