@@ -164,7 +164,7 @@ button {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-column-gap: 50px;
-    padding: 40px 40px 120px 40px;
+    padding: 40px 60px 120px 60px;
     grid-template-rows: auto;
     grid-row-gap: 100px;
     margin-top: 120px;
