@@ -5,4 +5,35 @@ dark-blue: #0A2C42;
 grey: rgba(145, 145, 145, 0.481);
 font-family: Arial, Helvetica, sans-serif
 */
-  
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#menu-wrapper {
+  width: 100%;
+  background: #2081c3;
+}
+
+#menu-wrapper ul {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+}
+
+#menu-wrapper ul li {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 15px;
+}
+
+#menu-wrapper ul li a,
+#menu-wrapper ul li a:visited {
+  color: #f7f9f9;
+  text-decoration: none;
+  margin: 0 2%;
+  font-weight: bolder;
+}
