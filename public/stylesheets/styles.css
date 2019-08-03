@@ -13,6 +13,8 @@ body {
 #menu-wrapper {
   width: 100%;
   background: #2081c3;
+  height:70px;
+
 }
 
 #menu-wrapper ul {
