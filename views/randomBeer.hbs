@@ -1,0 +1,21 @@
+{{#each beers}}
+<section class="beer-product">
+  <article class="beer-product-individual">
+    <div class="img-product">
+      <img src="{{image_url}}" alt="beer image">
+    </div>
+    <div class="description">
+      <h2>{{name}}</h2>
+      <h4>{{tagline}}</h4>
+      <p>{{description}}</p>
+      <ul>
+        <p><span>Food Pairing</span></p>
+          {{#each food_pairing}}
+          <li>{{this}}</li>
+          {{/each}}
+      </ul>
+      <p><span>Brewers Tips: </span>{{brewers_tips}}</p>
+    </div>
+  </article>
+</section>
+{{/each}}
