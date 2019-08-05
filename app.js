@@ -19,6 +19,8 @@ app.get('/random-beers', (request, response, next) => {
   response.render('random-beers');
 });
 
-
+app.get ('*', (request,response, next)=>{
+  response.render('404');
+});
 
 app.listen(3000);
