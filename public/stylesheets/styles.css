@@ -50,3 +50,28 @@ footer {
 footer p {
   color: #f7f9f9;
 }
+
+/************** BTNS ***********/
+.beer-img {
+  width: 350px;
+  display: block;
+  margin: 60px auto;
+}
+
+.btn {
+  background-color: #2081c3;
+  color: white;
+  display: block;
+  padding: 15px;
+  border-radius: 5px;
+  font-size: 0.9em;
+  margin: 15px auto;
+}
+
+.btn:hover {
+  background-color: #0a2c42;
+}
+
+.index-container a {
+  text-decoration: none;
+}
