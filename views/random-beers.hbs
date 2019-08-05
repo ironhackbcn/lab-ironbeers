@@ -1,5 +1,16 @@
 <section id="beers-infocard">
-
-    {{> beerPartial}}
-
+ <article>
+        <image class="imagebeer" src="{{image_url}}" alt="Beer +{{name}}"></image>
+        <h2>Name: {{this.name}}</h2>
+        <p>Description: {{this.description}}</p>
+        <h3>Tag Line: {{this.tagline}}</h3>
+        <ul>
+            <p>Food pairing:</p>
+        {{#each this.food_pairing}}
+            <li>{{@index}} {{this}}</li>
+        {{/each}}
+        </ul>
+        <h4>brewers_tips: {{this.brewer_tips}}</h4>
+    </article>
+   
 </section>

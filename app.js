@@ -26,19 +26,16 @@ app.get("/beers", (request, response, next) => {
 });
 app.get("/random-beers", (request, response, next) => {
   punkAPI
-    .getBeers()
-    .then(beers => {
-      console.log(beers);
-      const number=Math.floor(Math.random(0)*beers.length+1)
-      response.render("randoms-beers", { beers });
+    .getRandom()
+    .then(beer => {
+      console.log(beer[0]);
+      response.render("random-beers", beer[0]);
     })
     .catch(error => {
       console.log(error);
     });
 });
-app.get("/random-beers", (request, response, next) => {
-  response.render("random-beers");
-});
+
 app.get("*", (request, response, next) => {
   response.render("404");
 });
