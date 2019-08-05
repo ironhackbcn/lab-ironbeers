@@ -43,20 +43,20 @@ footer {
   background-color: #0a2c42;
   width: 100%;
   padding: 20px 20px;
-  /* position: absolute;
-  bottom: 0px; */
+  position: sticky;
+  bottom: 0px;
 }
 
 footer p {
   color: #f7f9f9;
 }
 
-/************** BTNS ***********/
+/************** BTNS & HOME ***********/
 
-.beer-img {
-  width: 350px;
+.beer-icon {
+  width: 400px;
   display: block;
-  margin: 60px auto;
+  margin: 70px auto;
 }
 
 .btn {
@@ -73,6 +73,10 @@ footer p {
   background-color: #0a2c42;
 }
 
+#random-btn {
+  margin-bottom: 300px;
+}
+
 .index-container a {
   text-decoration: none;
 }
@@ -80,17 +84,55 @@ footer p {
 /************** BEERS ***********/
 
 .beer-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   width: 100%;
   padding: 0 20px;
+  display: flex;
+  align-items: baseline;
+  flex-flow: row wrap;
 }
 
 .beer-card {
-  width: 33%;
+  margin: 10px 10px 20px 10px;
+  flex: 2 30vw;
 }
 
 .beer-img {
   height: 200px;
+  width: auto;
+}
+
+.beer-container h5,
+.random-card h5 {
+  color: rgba(145, 145, 145, 0.481);
+  margin-bottom: 10px;
+}
+
+/********** RANDOM BEERS ***********/
+
+.random-card {
+  width: 80%;
+  margin: 100px auto 500px auto;
+  display: grid;
+  grid-template-columns: repeat(4, 25%);
+}
+
+.random-body {
+  grid-column-start: 2;
+  grid-column-end: span 3;
+  justify-self: stretch;
+}
+
+.random-img {
+  height: 250px;
+  grid-column-start: 1 / span 1;
+  justify-self: center;
+}
+
+.random-card h3,
+p {
+  margin: 10px 0;
+}
+
+.random-card ul li {
+  margin-left: 30px;
 }
