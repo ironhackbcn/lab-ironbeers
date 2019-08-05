@@ -40,6 +40,8 @@ a, a:visited {
   text-align: left;
 }
 
+
+
 #footer {
   width: 100%;
 
@@ -66,7 +68,7 @@ p {
 }
 
 button {
-  display: inline-block;
+  display: block;
   color: #f7f9f9;
   background: #2081c3;
   border: 1px solid transparent;
@@ -74,4 +76,8 @@ button {
   margin: 1% auto;
   padding: 15px 32px;
   box-shadow: 1px 1px 10px #888888;
+}
+
+button a{
+  display:block;
 }
