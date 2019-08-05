@@ -1,43 +1,49 @@
-const express = require("express");
-const hbs = require("hbs");
+/* eslint-disable no-console */
+const express = require('express');
+
+const hbs = require('hbs');
+
 const app = express();
-const path = require("path");
-const PunkAPIWrapper = require("punkapi-javascript-wrapper");
+
+const path = require('path');
+
+const PunkAPIWrapper = require('punkapi-javascript-wrapper');
+
 const punkAPI = new PunkAPIWrapper();
 
-app.set("view engine", "hbs");
-app.set("views", __dirname + "/views");
-app.use(express.static(path.join(__dirname, "public")));
-hbs.registerPartials(path.join(__dirname + "/views/partials"));
+app.set('view engine', 'hbs');
 
-app.get("/", (request, response, next) => {
-  response.render("index");
+app.set('views', path.join(__dirname, '/views'));
+app.use(express.static(path.join(__dirname, 'public')));
+hbs.registerPartials(path.join(__dirname, '/views/partials'));
+
+app.get('/', (request, response, next) => {
+  response.render('index');
 });
-app.get("/beers", (request, response, next) => {
+app.get('/beers', (request, response, next) => {
   punkAPI
     .getBeers()
-    .then(beers => {
-      console.log(beers);
-      response.render("beers", { beers });
+    .then((beers) => {
+      response.render('beers', { beers });
     })
-    .catch(error => {
+    .catch((error) => {
       console.log(error);
     });
 });
-app.get("/random-beers", (request, response, next) => {
+app.get('/random-beers', (request, response, next) => {
   punkAPI
     .getRandom()
-    .then(beer => {
+    .then((beer) => {
       console.log(beer[0]);
-      response.render("random-beers", beer[0]);
+      response.render('random-beers', beer[0]);
     })
-    .catch(error => {
+    .catch((error) => {
       console.log(error);
     });
 });
 
-app.get("*", (request, response, next) => {
-  response.render("404");
+app.get('*', (request, response, next) => {
+  response.render('404');
 });
 
 app.listen(3000);

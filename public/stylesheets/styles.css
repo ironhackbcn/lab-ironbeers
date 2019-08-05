@@ -81,3 +81,38 @@ button {
 button a{
   display:block;
 }
+
+main{
+  width:100%;
+}
+
+#beers-infocard{
+  width:90%;
+  margin:5%;
+  display:flex;
+  flex-direction:row;
+  flex-wrap:wrap;
+}
+
+
+.beercard{
+  width:33%;
+  
+}
+.image-wrapper{
+  height:33%;
+}
+.image-wrapper image{
+  width:100%;
+  margin: 0 auto;
+  padding:0 auto;
+
+}
+article{
+  width:100%;
+  margin:0 auto;
+}
+.beercard article{
+  width: 90%;
+  margin:0 5%; 
+}
