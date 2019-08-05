@@ -43,8 +43,8 @@ footer {
   background-color: #0a2c42;
   width: 100%;
   padding: 20px 20px;
-  position: absolute;
-  bottom: 0px;
+  /* position: absolute;
+  bottom: 0px; */
 }
 
 footer p {
@@ -52,6 +52,7 @@ footer p {
 }
 
 /************** BTNS ***********/
+
 .beer-img {
   width: 350px;
   display: block;
@@ -74,4 +75,22 @@ footer p {
 
 .index-container a {
   text-decoration: none;
+}
+
+/************** BEERS ***********/
+
+.beer-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 0 20px;
+}
+
+.beer-card {
+  width: 33%;
+}
+
+.beer-img {
+  height: 200px;
 }
