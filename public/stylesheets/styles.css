@@ -32,8 +32,7 @@ body {
   margin: 6.5% 0%;
 }
 
-#menu-wrapper ul li a,
-#menu-wrapper ul li a:visited {
+a, a:visited {
   color: #f7f9f9;
   text-decoration: none;
   font-weight: bolder;
