@@ -85,7 +85,7 @@ button a{
 main{
   width:100%;
 }
-
+/* 
 #beers-infocard{
   width:90%;
   margin:5%;
@@ -97,12 +97,14 @@ main{
 
 .beercard{
   width:33%;
+  height:250px;
   
 }
 .image-wrapper{
-  height:33%;
+  width:20%;
+  
 }
-.image-wrapper image{
+.image-wrapper img{
   width:100%;
   margin: 0 auto;
   padding:0 auto;
@@ -115,4 +117,4 @@ article{
 .beercard article{
   width: 90%;
   margin:0 5%; 
-}
+} */
