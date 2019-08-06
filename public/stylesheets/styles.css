@@ -5,4 +5,32 @@ dark-blue: #0A2C42;
 grey: rgba(145, 145, 145, 0.481);
 font-family: Arial, Helvetica, sans-serif
 */
-  
+body {
+  height: 100vh;
+  background-color: rgba(145, 145, 145, 0.481);
+}
+.navbar {
+  background-color: #2081c3;
+}
+.navbar-nav {
+  padding: 2em;
+}
+.nav-item {
+  text-decoration: none;
+  color: #f7f9f9;
+  padding: 0 1em;
+}
+
+.footer {
+  background-color: #0a2c42;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.nav-footer {
+  padding: 1.5em;
+}
+.footer-text {
+  color: #f7f9f9;
+}
