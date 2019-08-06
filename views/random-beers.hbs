@@ -1,16 +1,25 @@
 <section id="beers-infocard">
- <article>
-        <img class="imagebeer" src="{{image_url}}" alt="Beer +{{name}}"></img>
-        <h2>Name: {{this.name}}</h2>
-        <p>Description: {{this.description}}</p>
-        <h3>Tag Line: {{this.tagline}}</h3>
-        <ul>
-            <p>Food pairing:</p>
-        {{#each this.food_pairing}}
-            <li>{{@index}} {{this}}</li>
-        {{/each}}
-        </ul>
-        <h4>brewers_tips: {{this.brewer_tips}}</h4>
+    <article class="random-beer">
+        <div class="image-wrapper-randombeer">
+            {{#if image_url}}
+                 <img class="imagebeer" src="{{image_url}}" alt="Beer {{name}}">
+            {{/if}}
+        </div>
+        <div class="text-wrapper-randombeer">
+            <h2>Name: {{name}}</h2>
+            <h3>Tag Line: {{tagline}}</h3>
+            <p>Description: {{description}}</p>
+            
+            <ul>
+                <p><b>Food pairing:</b></p>
+                {{#each food_pairing}}
+                <li>{{@index}} {{this}}</li>
+                {{/each}}
+            </ul>
+            {{#if this.brewers_tips}}
+            <p><b>brewers tips: </b>{{this.brewers_tips}}</p>
+            {{/if}}
+        </div>
     </article>
-   
+
 </section>

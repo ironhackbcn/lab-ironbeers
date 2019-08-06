@@ -16,10 +16,14 @@ body {
 #menu-wrapper {
   width: 100%;
   background: #2081c3;
-  height: 5%;
+  height: 10%;
   display: flex;
   box-shadow: 1px 1px 10px #888888;
+  position:fixed;
+  left:0;
+  top:0;
 }
+
 
 #menu-wrapper ul {
   width: 28%;
@@ -33,24 +37,13 @@ body {
   margin: 6.5% 0%;
 }
 
-a, a:visited {
+a,
+a:visited {
   color: #f7f9f9;
   text-decoration: none;
   font-weight: bolder;
   width: 100%;
   text-align: left;
-}
-
-
-
-#footer {
-  width: 100%;
-  position:sticky;
-
-  background: #0a2c42;
-  height: 70px;
-  color: #f7f9f9;
-  height: 70px;
 }
 
 .index-container {
@@ -62,10 +55,21 @@ a, a:visited {
 
 img {
   width: 20%;
-  margin: 5% auto 5% auto;
+  margin: 10% auto 5% auto;
 }
 
-p {
+#footer {
+  width: 100%;
+  background: #0a2c42;
+  height: 70px;
+  color: #f7f9f9;
+  height: 70px;
+  position:fixed;
+  bottom:0px;
+  left:0px;
+}
+
+#footer p {
   padding: 25px 10px;
 }
 
@@ -80,37 +84,48 @@ button {
   box-shadow: 1px 1px 10px #888888;
 }
 
-button a{
-  display:block;
+button a {
+  display: block;
 }
 
-main{
-  width:100%;
+
+
+main {
+  width: 100%;
 }
-#beers-infocard{
-  width:90%;
-  margin:4% auto;
+
+
+#beers-infocard {
+  width: 100%;
+  margin: 5% auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content:flex-start;
+  align-items:flex-start;
+}
+
+.beercard {
   display:flex;
-  flex-direction:row;
-  flex-wrap:wrap;
-}
-/* 
+  flex-direction:column;
+  width: 29%;
+  padding: 2%;
+  flex-wrap: wrap;
+  justify-content:center;
 
-.beercard{
-  width:33%;
-  height:250px;
-  
+ 
 }
-.image-wrapper{
-  width:20%;
-  
-}
-.image-wrapper img{
+
+.image-wrapper {
   width:100%;
-  margin: 0 auto;
-  padding:0 auto;
-
 }
+
+.image-wrapper img {
+  width:auto;
+  height:225px;
+} 
+
+
 article{
   width:100%;
   margin:0 auto;
@@ -118,4 +133,24 @@ article{
 .beercard article{
   width: 90%;
   margin:0 5%; 
-}  */
+}  
+
+h3{
+  color: rgba(145, 145, 145, 0.481);
+}
+
+.random-beer{
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.image-wrapper-randombeer{
+  width:20%;
+}
+
+.text-wrapper-randombeer{
+  width:60%;
+}
+
+
