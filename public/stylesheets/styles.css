@@ -10,8 +10,92 @@ body{
 }
 .nav{
    background-color: #2081C3;
-   color:#F7F9F9
+   color:#F7F9F9;
+   padding-left:25px
 }
 .nav div{
-    display: inline-block
+    display: inline-block;
+    padding:10px
+}
+.nav div a{ 
+    color:white;
+    text-decoration: none;
+    font-weight: bold
+}
+.index-container{
+    text-align: center;
+    margin-top: 100px;
+}
+.index-container img{width: 400px}
+.wrap-list{
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: 0 auto;
+    align-items: baseline;
+    
+}
+.beer_card{
+    width: 26%;
+    padding: 36px;
+}
+.beer_card img{
+    width: 20%;
+}
+.beer_card .name{
+    font-weight: bold;
+    padding-top: 10px;
+}
+.beer_card .tagline{
+    color: grey;;
+}
+.beer_card .description{
+
+    padding: 10px 0px;
+}
+
+.detail_wrap_content{
+    display: flex;
+    width: 78%;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+.detail_wrap_content .image{
+    padding:25px
+}
+.detail_wrap_content .image img{
+    width:45px
+}
+
+.detail_wrap_content .name{
+    font-weight: bold;
+    padding: 25px 0px;
+}
+.detail_wrap_content .tagline{
+    color: grey;
+    padding: 10px 0px;
+}
+.detail_wrap_content .description{
+    padding: 10px 0px;
+}
+.detail_wrap_content .food{
+    font-weight: bold;
+}
+.detail_wrap_content .food ul{
+    font-weight: normal;
+    line-height: 30px;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #0A2C42;
+    color: white;
+    padding: 20px;
+
+  }
+.footer .develop{
+    color:white;
 }

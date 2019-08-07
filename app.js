@@ -9,6 +9,7 @@ const path = require('path');
 
 const indexRouter = require('./routes/index');
 const BeersRouter = require('./routes/beers');
+const RandomBeerRouter = require('./routes/random-beer');
 
 app.set('view engine', 'hbs');
 app.set('views', path.join(__dirname, '/views'));
@@ -20,5 +21,6 @@ app.use('/', indexRouter);
 
 app.use('/beers', BeersRouter);
 
+app.use('/random-beer', RandomBeerRouter);
 
 app.listen(3000);

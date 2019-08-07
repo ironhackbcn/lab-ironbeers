@@ -1,6 +1,5 @@
 /* eslint-disable indent */
 /* eslint-disable func-names */
-/* eslint-disable prefer-arrow-callback */
 
 const express = require('express');
 
@@ -10,14 +9,12 @@ const PunkAPIWrapper = require('punkapi-javascript-wrapper');
 
 const punkAPI = new PunkAPIWrapper();
 
-/* GET home page. */
 router.get('/', (req, res) => {
-    punkAPI.getBeers()
+    punkAPI.getRandom()
         .then((beers) => {
-            res.render('beers', beers);
+            res.render('random-beer', beers[0]);
         })
         .catch((error) => {
-            // eslint-disable-next-line no-console
             console.log(error);
         });
 });

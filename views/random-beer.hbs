@@ -1,0 +1,17 @@
+<div class="detail_wrap_content">
+    <div class="image"><img src="{{image_url}}"></div>
+    <div clas="content">
+        <div class="name">{{name}}</div>
+        <div class="tagline">{{tagline}}</div>
+        <div class="description">{{description}}</div>
+        <div class="food">Food pairing
+            <ul>
+                {{#each food_pairing}}
+                <li>{{this}}</li>
+                {{/each}}
+            </ul>
+        </div>
+        <div clas="brewer"><b>Brewer tips :</b> {{brewers_tips}}</div>
+
+    </div>
+</div>
