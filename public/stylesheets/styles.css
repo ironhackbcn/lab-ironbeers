@@ -9,11 +9,16 @@ font-family: Arial, Helvetica, sans-serif
   box-sizing: border-box;
 }
 body {
-  height: 100vh;
-  background-color: rgba(145, 145, 145, 0.481);
+  height: 100%;
+  background-color: #e2dfdf;
+  position: relative;
 }
 .navbar {
   background-color: #2081c3;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
 }
 .navbar-nav {
   padding: 2em;
@@ -25,10 +30,10 @@ body {
 }
 
 .index-container-img {
-  width: 50%;
+  width: 20%;
 }
 .container-img {
-  margin: 2em;
+  margin: 140px 0 50px;
 }
 .button {
   background-color: #2081c3;
@@ -44,12 +49,101 @@ body {
   display: flex;
   flex-direction: column;
   text-align: center;
-  margin: 0 auto;
+  /* margin: 80px auto; */
 }
 
+.beers-card {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 90%;
+  margin: 80px auto;
+}
+
+.beerPartial-card {
+  width: 33%;
+  padding: 1em 2em;
+}
+
+.beerPartial-container-img {
+  text-align: center;
+}
+
+.beerPartial-container-img img {
+  width: auto;
+  max-height: 250px;
+}
+
+.beerPartial-title {
+  font-size: 1.5em;
+  font-weight: 800;
+  margin-top: 1em;
+}
+
+.beerPartial-tagline {
+  color: rgba(145, 145, 145, 0.481);
+  margin-top: 0.2em;
+}
+
+.beerPartial-description {
+  margin-top: 1em;
+}
+
+.beer-random {
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 150px;
+}
+
+.beer-random-img {
+  width: 30%;
+  text-align: center;
+}
+
+.beer-random-img img {
+  max-height: 450px;
+}
+.beer-random-info {
+  width: 60%;
+}
+
+.beer-random-info h2 {
+  font-size: 2em;
+  font-weight: 800;
+  margin: 1em 0;
+}
+
+.beer-random-info h3 {
+  font-size: 1.5em;
+  color: rgba(145, 145, 145, 0.481);
+}
+
+.beer-random-info p {
+  font-size: 1.5em;
+  margin: 0.8em 0;
+}
+
+.beer-random-info span {
+  font-weight: 800;
+}
+
+.beer-random-info li {
+  font-size: 1.3em;
+  list-style-type: circle;
+  display: list-item;
+  margin-left: 50px;
+  line-height: 2em;
+}
+
+.beer-random-info h4 {
+  font-size: 1.5em;
+  margin-top: 0.8em;
+}
 .footer {
   background-color: #0a2c42;
-  position: absolute;
+  position: fixed;
   left: 0;
   right: 0;
   bottom: 0;
