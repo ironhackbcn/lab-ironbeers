@@ -1,3 +1,23 @@
-<section class="beer-section">
-  <h1>hello random beers</h1>
+<section class="beer-random-section">
+  <div class="image-beer-product">
+    {{#if image_url}}
+    <img src="{{image_url}}">
+    {{/if}}
+  </div>
+
+  <div class="text-beer-description">
+    <h2>{{name}}</h2></br>
+    <h3>{{tagline}}</h3></br>
+    <p class="description-text">Description: {{description}}</p></br>
+    <p class="text-pairing">Food pairing:</p>
+    <ul>
+      {{#each food_pairing}}
+      <li>{{@index}} {{this}}</li>
+      {{/each}}
+    </ul>
+    </br>
+    {{#if this.brewers_tips}}
+    <p class="description-text">Brewers tips: {{this.brewers_tips}}</p>
+    {{/if}}
+  </div>
 </section>
