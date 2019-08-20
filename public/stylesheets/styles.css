@@ -7,6 +7,10 @@ body {
   background-color: #f7f9f9;
 }
 
+a {
+  text-decoration: none;
+}
+
 /*HEADER*/
 
 nav {
@@ -58,6 +62,35 @@ footer {
 footer p {
   color: #f7f9f9;
   font-size: 1em;
+}
+
+/*INDEX CONTAINER*/
+
+.index-container {
+  text-align: center;
+  padding-top: 4em;
+}
+
+.beer-buttons {
+  margin-top: 2em;
+}
+
+.beer-buttons .btn {
+  -webkit-border-radius: 10;
+  -moz-border-radius: 10;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 1px 5px rgba(145, 145, 145, 0.481);
+  -moz-box-shadow: 0px 1px 5px rgba(145, 145, 145, 0.481);
+  box-shadow: 0px 1px 5px rgba(145, 145, 145, 0.481);
+  color: #f7f9f9;
+  font-size: 1em;
+  background: #2081c3;
+  padding: 0.8em 1.5em;
+  text-decoration: none;
+  cursor: pointer;
+  display: block;
+  text-decoration: none;
+  margin: 1em auto;
 }
 
 /*
