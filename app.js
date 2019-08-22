@@ -32,4 +32,15 @@ app.get("/beers", (req, res, next) => {
     });
 });
 
+app.get("/random-beer", (req, res, next) => {
+  punkAPI
+    .getRandom()
+    .then(beers => {
+      res.render("random-beer", { beers });
+    })
+    .catch(error => {
+      console.log("Error", error);
+    });
+});
+
 app.listen(3000);

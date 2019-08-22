@@ -50,8 +50,7 @@ nav li a {
   color: #f7f9f9;
 }
 
-nav li a:hover,
-nav li a.active {
+nav li a:hover {
   color: #0a2c42;
 }
 
@@ -134,9 +133,47 @@ h4 {
   margin-top: 0.5em;
 }
 
+h2 {
+  margin-top: 2em;
+}
+
 p {
   font-size: 1em;
   line-height: 1.6em;
+}
+
+/*BEERS RANDOM CONTAINER*/
+.beers-random-container {
+  margin: 4em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.random-beer {
+  width: 30%;
+  text-align: center;
+}
+
+.beers-random-container img {
+  max-width: 100%;
+  max-height: 350px;
+}
+
+.beers-random-container h1 {
+  margin-top: 0em;
+}
+
+.random-description {
+  width: 70%;
+}
+
+.food-pairing {
+  margin-bottom: 2em;
+}
+
+.food-pairing li {
+  margin-bottom: 0.5em;
 }
 
 /*
