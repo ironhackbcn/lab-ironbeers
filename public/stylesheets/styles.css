@@ -90,8 +90,15 @@ footer > p {
   color: #f7f9f9;
 }
 
-.beer-container {
-  width: 33.3%;
+.beer-card {
+  width: 100%;
   display: flex;
-  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.random-beer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
