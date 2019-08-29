@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 const express = require('express');
 const hbs = require('hbs');
 const path = require('path');
@@ -16,8 +17,12 @@ app.get('/', (req, res, next) => {
 });
 
 app.get('/beers', (req, res, next) => {
-  punkAPI.getBeers();
-  res.render('beers');
+  punkAPI
+    .getBeers()
+    .then((beers) => {
+      res.render('beers', { beers });
+    })
+    .catch(err => console.log(err));
 });
 
 app.listen(3000);
