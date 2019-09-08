@@ -19,10 +19,9 @@ app.get('/', (req, res, next) => {
 });
 
 app.get('/beers', (req, res, next) => {
-
-  let prova = {
-    cities: ["Miami", "Madrid", "Barcelona", "Paris", "México", "Berlín"]
-  }
+  // let prova = {
+  //   cities: ["Miami", "Madrid", "Barcelona", "Paris", "México", "Berlín"]
+  // }
 
   punkAPI.getBeers()
     .then(beers => {
@@ -34,8 +33,15 @@ app.get('/beers', (req, res, next) => {
     })
 });
 
-app.get('/random-beers', (req, res, next) => {
-  res.render('random-beer');
+app.get('/random-beers', (request, response, next) => {
+  punkAPI.getRandom()
+    .then(beers => {
+      console.log(beers[0]);
+      response.render('random-beer', beers[0]);
+    })
+    .catch(error => {
+      console.log(error);
+    });
 });
 
 app.listen(3000);
