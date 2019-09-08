@@ -5,4 +5,56 @@ dark-blue: #0A2C42;
 grey: rgba(145, 145, 145, 0.481);
 font-family: Arial, Helvetica, sans-serif
 */
+
+body{
+    width: 100%;
+    background-color: blueviolet;
+    font-family: Arial, Helvetica, sans-serif;
+    color:#F7F9F9;
+}
+
+img{
+    width: 30%;
+}
+
+.wrapper{
+    width: 80%;
+    margin: 0 auto;
+}
+
+img{
+    margin: 0 auto;
+    margin:10px auto;
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btns{
+    margin: 0 auto;
+    width: 30%;
+    float: center;
+    
+}
+
+.btn-beer{
+    background: #2081C3;; /* this is a light blue */
+    font-size: 85%;
+    float: none;
+    margin: 15px;
+    border-radius: 30px;
+    color:#F7F9F9;
+}
   
+.cards-container {
+    float: none;
+    padding: 10% 20%;
+    margin: 0 auto;
+    width: 100%;
+  }
+  
+.cards-container img {
+    object-fit: cover;
+    object-position: center;
+    width: 20%;
+  }
