@@ -19,12 +19,38 @@ font-family: Arial, Helvetica, sans-serif
     background-color: #F7F9F9;
     height: 100vh
   }
-
+  p{
+      font-size: 1.3rem;
+  }
+  span{
+    font-size: 1.3rem;
+    font-weight: 700;
+  }
+  h2{
+      font-size: 2rem;
+      font-weight: 700;
+      padding-bottom: 5px;
+  }
+  h3{
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: rgba(145, 145, 145, 0.481);
+      padding-bottom: 30px;
+  }
+  figure{
+    width: auto;
+    height: 300px;
+  }
+  figure>img{
+      height: 100%;
+  }
   /*NAVBAR*/
 
   nav{
         background-color: #2081C3;
         box-shadow: 5px 10px 8px rgba(145, 145, 145, 0.481);
+        position: fixed;
+        width: 100%;
   }
 
   nav>ul{
@@ -45,6 +71,9 @@ font-family: Arial, Helvetica, sans-serif
 
   footer{
       background-color: #0A2C42;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
   }
   footer>p{
     color: #F7F9F9;
@@ -59,7 +88,7 @@ font-family: Arial, Helvetica, sans-serif
       flex-flow: column nowrap;
       justify-content: center;
       align-items: center;
-      margin: 100px auto;
+      padding: 100px 25px 50px;
   }
   .index-container>img{
       height: 30%;
@@ -81,3 +110,48 @@ font-family: Arial, Helvetica, sans-serif
     text-decoration: none;
     color: #F7F9F9;
   }
+  /*BEERS*/
+  .cards-container{
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      flex-wrap: wrap;
+      padding: 100px 30px 50px;
+  }
+  .card{
+      display: flex;
+      flex-flow: column nowrap;
+      padding: 25px;
+      width: 30%;
+      justify-content: center;
+      align-items: center;
+  }
+  
+ /*RANDOM BEER*/
+.random-beer-container{
+    display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 100px 20% 50px;
+}
+.random-beer-container>figure{
+    width: auto;
+    height: 500px;
+  }
+.food-paring{
+    color: black;
+}
+article{
+    margin-left: 50px;
+}
+
+article>h1{
+    margin-bottom: 25px;
+}
+article>ul{
+    margin-bottom: 15px;
+}
+article>ul>li{
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}

@@ -22,6 +22,13 @@ app.get('/beers', async (req, res, next) => {
   res.render('beers', {beers}); 
 });
 
+app.get('/random-beer', async (req, res, next)=>{
+  const beers = await punkAPI.getRandom()
+  const [randomBeer] = beers
+  console.log(randomBeer)
+  res.render('random-beer', randomBeer); 
+})
+
 
 app.listen(3000, ()=>{
   console.log("I'm here!!!! 3000")
