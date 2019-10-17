@@ -41,8 +41,7 @@ html, body {
 }
 
 footer {
-  display: flex;
-  
+  display: flex; 
 }
 
 .footer-bar {
@@ -51,7 +50,7 @@ footer {
   background-color: #0A2C42;
   padding: 10px;
   width: 100%;
-  /*position: fixed;*/
+  position: fixed;
   bottom: 0;
   box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.4);
 }
@@ -76,13 +75,13 @@ footer {
 }
 
 .hero-image {
-  max-width: 400px;
+  max-width: 300px;
   height: auto;
   padding: 30px;
 }
 
 .error-image {
-  max-height: 500px;
+  max-height: 400px;
   width: auto;
   padding: 30px;
 }
@@ -110,8 +109,7 @@ footer {
 .cards-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  
+  justify-content: space-between;  
 }
 
 .beer-container {
@@ -128,11 +126,19 @@ footer {
   .beer-container {
     width: calc(50% - 30px);
   }
+
+  .error-image {
+    max-height: 300px;
+  }
 }
 
 @media only screen and (max-width: 600px) {
   .beer-container {
     width: calc(100% - 10px);
+  }
+
+  .error-image {
+    max-height: 200px;
   }
 }
 
@@ -167,4 +173,19 @@ footer {
 
 .beer-text {
   padding: 10px;
+}
+
+.random-beer-container {
+  display:flex;
+  text-align: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 1000px;
+  margin-top: 60px;
+}
+
+.random-beer-image {
+  width: auto;
+  max-height: 400px;
+  padding: 0px 30px 30px 0px;
 }
