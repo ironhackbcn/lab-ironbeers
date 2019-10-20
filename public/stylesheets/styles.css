@@ -6,3 +6,170 @@ grey: rgba(145, 145, 145, 0.481);
 font-family: Arial, Helvetica, sans-serif
 */
   
+
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: rgb(228, 226, 226);
+}
+
+/*!!!!!NAVBAR!!!!!!!!!!!*/
+.navbar{    
+    width: 100%;
+    background-color:#2081C3;
+    padding: 30px;
+    justify-content: flex-start;
+}
+
+.nav-item{
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+}
+
+/*!!!!!INDEX!!!!!!!!!!!!!*/
+.beer-image{
+    max-width: 25%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 120px;
+    margin-bottom: 50px;
+
+}
+
+.btn-container{
+    padding:40px;
+    display:flex;
+    flex-direction: column;
+ 
+}
+
+.btn-primary{
+    width: 10em;
+    margin-bottom: 1em;
+}
+
+#btn-random{
+    width: 15em;
+}
+
+
+
+/*!!!!!!!BEERS PAGE!!!!!!!!*/
+
+.card{
+    background-color: rgb(229, 226, 226);
+    border: none;
+    margin-bottom: 1vh;
+}
+
+.cards-container {
+    display: grid;
+    background-color: rgb(229, 226, 226);
+    grid-template-columns: auto auto auto;
+    margin: 15vh 5em; 
+    }
+    
+.cards-container img {
+    height: 8em;
+    max-width: 10%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto; 
+}
+
+.card-title{ 
+    font-size: larger;
+    font-weight: 600;
+}
+
+.card-tag{
+    font-size: 13px;    
+}
+
+.card-text{
+    font-weight: 500;
+}
+
+.cards-container h4 {
+    color: grey;
+    font-size: 1.2rem;
+}
+
+
+/*!!!!!!!!BEER RANDOM PAGE!!!!!!!*/
+
+.random-container-card {
+    display:flex;
+    justify-content: space-around;
+    margin-top: 90px;
+}
+
+.random-image-card{
+    margin-left: 80px;
+    margin-right: 40px;
+}
+
+.random-image-card img{
+    max-width: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.random-title-card{
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+.random-tagline-card{
+    color: rgb(139, 138, 138);   
+    margin-top: 30px; 
+    margin-bottom: none;
+}
+
+.random-article-card{
+    margin-right: 10em;
+}
+
+.random-article-card ul{
+ padding-left: 2.5em;
+}
+
+
+
+/* !!!!!!!!FOOTER!!!!!!!!!!!!!!!*/
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #0A2C42;
+    color: white;
+    text-align: left;
+  }
+
+#footer-text{
+    margin: 20px;
+    font-size: 14px;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .cards-container {
+    display:grid;
+    grid-template-columns: auto auto;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .cards-container {
+        display:grid;
+        grid-template-columns: auto;
+    }
+}
