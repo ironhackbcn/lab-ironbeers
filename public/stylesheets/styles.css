@@ -5,4 +5,71 @@ dark-blue: #0A2C42;
 grey: rgba(145, 145, 145, 0.481);
 font-family: Arial, Helvetica, sans-serif
 */
-  
+
+/*ponía solo navbar, pero quiero que el 
+flex-direction me lo ponga en el padre*/
+
+.navbar ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+    background-color: lightblue;
+    padding: 2%;
+    list-style: none;
+    /*para quitar los puntos de la lista en la navbar*/
+}
+
+button {
+    color: rgb(255, 255, 255);
+    background-color: #2081C3;
+    padding: 2%;
+    border-radius: 15px;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-content: center;
+}
+
+img {
+    display: block;
+    margin: auto;
+}
+
+.index-container {
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+}
+
+footer {
+    background-color: #0A2C42;
+    color: white;
+    padding: 2%;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    width: 75px;
+    display: block;
+    margin: auto;
+}
+
+.tagline {
+    color: grey;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.beer-container {
+    width: 20%;
+    margin: 2%;
+}
